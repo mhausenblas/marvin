@@ -14,13 +14,12 @@ import argparse
 import json
 import tornado.ioloop
 import tornado.web
-import osmapi
+import overpass
 
 from tornado.escape import json_encode
 
 DEBUG = True
-api = osmapi.OsmApi()
-
+api = overpass.API()
 
 
 if DEBUG:
@@ -38,11 +37,10 @@ class LookupAPIHandler(tornado.web.RequestHandler):
         try:
             radius = self.get_query_argument(name="radius", default=100, strip=True) # default to 100m radius
             logging.debug("Got location '%s' with radius %dm" %(location, int(radius)))
-            
-            amenity = api.NodeGet(123)
-            if amenity:
+            lres = api.Get("node[\"name\"~\"%s\"]" %(location))
+            if lres:
                 self.set_header("Content-Type", "text/plain")
-                self.write(amenity)
+                self.write(lres)
                 self.finish()
             else:
                 self.set_status(404)
