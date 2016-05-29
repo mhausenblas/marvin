@@ -1,1 +1,2 @@
-overpass=0.4.0
+tornado==4.3
+overpass==0.4.0
