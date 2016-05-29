@@ -77,4 +77,5 @@ if __name__ == "__main__":
         (r"/closeby/(.*)", LookupAPIHandler)
     ])
     app.listen(8989)
+    print("This is MARVIN OSM lookup v%s" %(VERSION))
     tornado.ioloop.IOLoop.current().start()

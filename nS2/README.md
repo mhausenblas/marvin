@@ -7,11 +7,18 @@ This nS is written in Python and maps a location and radius to close-by public t
 The response of nS2 is a JSON document (a list of close-by facilities) in the following format:
 
     [
+      {
+          "id": ID,
+          "kind": "TYPE",
+          "lat": 0.000000,
+          "lon": 0.000000,
+          "name": "SOMENAME"
+      },
       ...
     ]
 
 
-The nS2 uses the [Overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API/):
+The nS2 uses the [Overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API/), for example (in OQL):
 
     node["name"~"Zaventem"]["public_transport"="platform"];
     node(around:1000)["amenity"="post_box"];
