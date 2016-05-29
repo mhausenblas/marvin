@@ -32,19 +32,22 @@ else:
 class LookupAPIHandler(tornado.web.RequestHandler):
     def get(self, location):
         """
-        Handles amenities lookup via `/closeby/$LOCATION?radius=$RADIUS` resource.
+        Handles lookup of public transport via `/closeby/$LOCATION?radius=$RADIUS` resource.
         """
         try:
             radius = self.get_query_argument(name="radius", default=100, strip=True) # default to 100m radius
             logging.debug("Got location '%s' with radius %dm" %(location, int(radius)))
-            lres = api.Get("node[\"name\"~\"%s\"]" %(location))
+            oql = "node[\"name\"~\"%s\"]; node(around:%d)[\"public_transport\"=\"platform\"];" %(location,int(radius))
+            logging.debug("OQL: %s" %(oql))
+            lres = api.Get(oql)
             if lres:
                 self.set_header("Content-Type", "text/plain")
                 self.write(lres)
                 self.finish()
             else:
                 self.set_status(404)
-        except:
+        except Exception, e:
+            logging.error(e)
             self.set_status(404)
 
 def _make_app():

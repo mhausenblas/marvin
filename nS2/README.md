@@ -11,19 +11,17 @@ The response of nS2 is a JSON document, a list of close-by amenities for a locat
     ]
 
 
-    import overpass
-    api = overpass.API()
-    response = api.Get('node["name"="Salt Lake City"]')
+The nS2 uses the [Overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API/):
 
     node["name"~"Zaventem"]["public_transport"="platform"];
     node(around:1000)["amenity"="post_box"];
     out body;
-
-    node["name"~"crowne plaza airport belgium"];
-    node(around:500)["public_transport"="platform"];
+    
+    node["name"~"Zaventem"];
+    node(around:200)["public_transport"="platform"];
     out body;
 
-
+See also http://overpass-turbo.eu for interactive testing and mapping.
 
 ## Usage
 

@@ -1,0 +1,1799 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4774319,
+          50.8720864
+        ]
+      },
+      "type": "Feature",
+      "id": 144913426,
+      "properties": {
+        "ref:De_Lijn": "305532",
+        "name": "Zaventem De Vlemincklaan",
+        "bus": "yes",
+        "route_ref:De_Lijn": "351;358;616;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4741722,
+          50.8860083
+        ]
+      },
+      "type": "Feature",
+      "id": 146627846,
+      "properties": {
+        "ref:De_Lijn": "305578",
+        "name": "Zaventem Watertorenlaan",
+        "bus": "yes",
+        "route_ref:De_Lijn": "222;272;282;352;359;505;530;531;616;721;830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4637952,
+          50.8822554
+        ]
+      },
+      "type": "Feature",
+      "id": 309630402,
+      "properties": {
+        "ref:De_Lijn": "308828",
+        "name": "Zaventem Hoogstraat",
+        "bus": "yes",
+        "route_ref:De_Lijn": "471;620;621;652;659",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4705443,
+          50.8757169
+        ]
+      },
+      "type": "Feature",
+      "id": 310744628,
+      "properties": {
+        "ref:De_Lijn": "301814",
+        "name": "Zaventem Bloemenveld",
+        "bus": "yes",
+        "route_ref:De_Lijn": "359;616;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.472668,
+          50.8786302
+        ]
+      },
+      "type": "Feature",
+      "id": 311740895,
+      "properties": {
+        "ref:De_Lijn": "307187",
+        "name": "Zaventem Vijvers",
+        "bus": "yes",
+        "route_ref:De_Lijn": "359;616;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4761843,
+          50.8718477
+        ]
+      },
+      "type": "Feature",
+      "id": 311741391,
+      "properties": {
+        "ref:De_Lijn": "305531",
+        "name": "Zaventem De Vlemincklaan",
+        "bus": "yes",
+        "route_ref:De_Lijn": "351;358;616;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4695247,
+          50.8721104
+        ]
+      },
+      "type": "Feature",
+      "id": 311741403,
+      "properties": {
+        "ref:De_Lijn": "305546",
+        "name": "Zaventem Grote Daalstraat",
+        "bus": "yes",
+        "route_ref:De_Lijn": "351;358;359",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4706113,
+          50.8720479
+        ]
+      },
+      "type": "Feature",
+      "id": 311741563,
+      "properties": {
+        "ref:De_Lijn": "305544",
+        "name": "Zaventem Grote Daalstraat",
+        "bus": "yes",
+        "route_ref:De_Lijn": "351;352;358;616;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4809568,
+          50.8812455
+        ]
+      },
+      "type": "Feature",
+      "id": 312461241,
+      "properties": {
+        "bin": "yes",
+        "ref:De_Lijn": "305583",
+        "network": "DLVB",
+        "shelter": "yes",
+        "bus": "yes",
+        "bench": "yes",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "route_ref:De_Lijn": "530;531;830",
+        "highway": "bus_stop",
+        "name": "Zaventem Imbroekstraat"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4809474,
+          50.8814026
+        ]
+      },
+      "type": "Feature",
+      "id": 312461247,
+      "properties": {
+        "bin": "yes",
+        "ref:De_Lijn": "305582",
+        "network": "DLVB",
+        "shelter": "yes",
+        "bus": "yes",
+        "bench": "yes",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "route_ref:De_Lijn": "530;531;830",
+        "highway": "bus_stop",
+        "name": "Zaventem Imbroekstraat"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4848815,
+          50.8734428
+        ]
+      },
+      "type": "Feature",
+      "id": 312461280,
+      "properties": {
+        "ref:De_Lijn": "305573",
+        "name": "Zaventem Sterrebeekstraat",
+        "shelter": "yes",
+        "bus": "yes",
+        "route_ref:De_Lijn": "351;358;616;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4610829,
+          50.8852682
+        ]
+      },
+      "type": "Feature",
+      "id": 312544467,
+      "properties": {
+        "ref:De_Lijn": "308685",
+        "name": "Zaventem Maalbeekweg",
+        "bus": "yes",
+        "route_ref:De_Lijn": "471;620;621;652;659",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4610049,
+          50.8851285
+        ]
+      },
+      "type": "Feature",
+      "id": 312544470,
+      "properties": {
+        "ref:De_Lijn": "308686",
+        "name": "Zaventem Maalbeekweg",
+        "bus": "yes",
+        "route_ref:De_Lijn": "471;620;621;652;659",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.511016,
+          50.8710639
+        ]
+      },
+      "type": "Feature",
+      "id": 315770958,
+      "properties": {
+        "ref:De_Lijn": "307897",
+        "name": "Zaventem Van Ingelgomstraat",
+        "bus": "yes",
+        "route_ref:De_Lijn": "830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.5033847,
+          50.8697661
+        ]
+      },
+      "type": "Feature",
+      "id": 315770972,
+      "properties": {
+        "ref:De_Lijn": "308548",
+        "name": "Zaventem Mercuriusstraat",
+        "bus": "yes",
+        "route_ref:De_Lijn": "830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4984367,
+          50.8696707
+        ]
+      },
+      "type": "Feature",
+      "id": 315770975,
+      "properties": {
+        "ref:De_Lijn": "308551",
+        "name": "Zaventem Brixtonlaan",
+        "bus": "yes",
+        "route_ref:De_Lijn": "830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4755481,
+          50.8806098
+        ]
+      },
+      "type": "Feature",
+      "id": 320920144,
+      "properties": {
+        "ref:De_Lijn": "305539",
+        "name": "Zaventem Mariadal",
+        "bus": "yes",
+        "route_ref:De_Lijn": "530;531;830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4340846,
+          50.8640292
+        ]
+      },
+      "type": "Feature",
+      "id": 321573538,
+      "properties": {
+        "bin": "yes",
+        "ref:De_Lijn": "305495",
+        "network": "DLVB",
+        "shelter": "yes",
+        "bus": "yes",
+        "bench": "yes",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "20",
+        "route_ref:De_Lijn": "318;351;358;410;554",
+        "highway": "bus_stop",
+        "name": "Sint-Stevens-Woluwe Harenheide"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4538129,
+          50.8658921
+        ]
+      },
+      "type": "Feature",
+      "id": 321620658,
+      "properties": {
+        "ref:De_Lijn": "307821",
+        "name": "Kraainem Viaduct E40",
+        "bus": "yes",
+        "route_ref:De_Lijn": "318;410;531;554;659",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "20",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4461626,
+          50.8969705
+        ]
+      },
+      "type": "Feature",
+      "id": 343372210,
+      "properties": {
+        "ref:De_Lijn": "303540",
+        "name": "Diegem Degeyndtgaarde",
+        "shelter": "yes",
+        "bus": "yes",
+        "route_ref:De_Lijn": "222",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "66",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4694914,
+          50.885961
+        ]
+      },
+      "type": "Feature",
+      "id": 366167820,
+      "properties": {
+        "ref:De_Lijn": "305565",
+        "name": "Zaventem Station",
+        "bus": "yes",
+        "wikipedia": "nl:Station Zaventem",
+        "route_ref:De_Lijn": "222;272;505;530;531;682",
+        "network": "DLVB",
+        "wikidata": "Q4370800",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "operator:wikidata": "Q614819"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4512279,
+          50.8679096
+        ]
+      },
+      "type": "Feature",
+      "id": 492794474,
+      "properties": {
+        "ref:De_Lijn": "305502",
+        "name": "Sint-Stevens-Woluwe Woluwedal",
+        "bus": "yes",
+        "route_ref:De_Lijn": "318;351;358;359;410;554",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "20",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4521744,
+          50.8682404
+        ]
+      },
+      "type": "Feature",
+      "id": 492794481,
+      "properties": {
+        "bin": "yes",
+        "ref:De_Lijn": "305503",
+        "network": "DLVB",
+        "shelter": "yes",
+        "bus": "yes",
+        "bench": "yes",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "20",
+        "route_ref:De_Lijn": "318;351;358;359;410;554",
+        "highway": "bus_stop",
+        "name": "Sint-Stevens-Woluwe Woluwedal"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4610765,
+          50.8922243
+        ]
+      },
+      "type": "Feature",
+      "id": 702067767,
+      "properties": {
+        "ref:De_Lijn": "305554",
+        "name": "Zaventem Olmenstraat",
+        "shelter": "yes",
+        "bus": "yes",
+        "route_ref:De_Lijn": "222;272;471;620;621;652;659;721",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4707064,
+          50.87575
+        ]
+      },
+      "type": "Feature",
+      "id": 785150895,
+      "properties": {
+        "ref:De_Lijn": "301813",
+        "name": "Zaventem Bloemenveld",
+        "bus": "yes",
+        "route_ref:De_Lijn": "359;616;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.5030736,
+          50.8696873
+        ]
+      },
+      "type": "Feature",
+      "id": 842234787,
+      "properties": {
+        "ref:De_Lijn": "308549",
+        "name": "Zaventem Mercuriusstraat",
+        "bus": "yes",
+        "route_ref:De_Lijn": "830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.493891,
+          50.8753438
+        ]
+      },
+      "type": "Feature",
+      "id": 897842483,
+      "properties": {
+        "ref:De_Lijn": "305562",
+        "name": "Zaventem Sint-Martinusweg",
+        "bus": "yes",
+        "route_ref:De_Lijn": "351;358;530;616;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4695435,
+          50.880092
+        ]
+      },
+      "type": "Feature",
+      "id": 1008434248,
+      "properties": {
+        "ref:De_Lijn": "305568",
+        "name": "Zaventem Kleine Daalstraat",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;282;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4697197,
+          50.8800387
+        ]
+      },
+      "type": "Feature",
+      "id": 1008434291,
+      "properties": {
+        "ref:De_Lijn": "305567",
+        "name": "Zaventem Kleine Daalstraat",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;282;652;721",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4818724,
+          50.8980925
+        ]
+      },
+      "type": "Feature",
+      "id": 1014442257,
+      "properties": {
+        "bin": "yes",
+        "name:en": "Brussels Airport Platform B",
+        "name": "Zaventem Luchthaven Perron B",
+        "shelter": "yes",
+        "bus": "yes",
+        "wikipedia": "nl:Brussels Airport",
+        "route_ref:De_Lijn": "272;616;651;652;659;660;681;682;683;686;820;821;830",
+        "bench": "yes",
+        "name:fr": "Zaventem Aéroport Quai B",
+        "ref:De_Lijn": "308652",
+        "wikidata": "Q28934",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "operator:wikidata": "Q614819",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4348203,
+          50.8640946
+        ]
+      },
+      "type": "Feature",
+      "id": 1128105196,
+      "properties": {
+        "bin": "yes",
+        "ref:De_Lijn": "305494",
+        "network": "DLVB",
+        "shelter": "yes",
+        "bus": "yes",
+        "bench": "yes",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "20",
+        "route_ref:De_Lijn": "318;351;358;410;554",
+        "highway": "bus_stop",
+        "name": "Sint-Stevens-Woluwe Harenheide"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4638923,
+          50.8948023
+        ]
+      },
+      "type": "Feature",
+      "id": 1161572507,
+      "properties": {
+        "ref:De_Lijn": "305528",
+        "name": "Zaventem B-House",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;505;616;651;652;659;660;681;682;683;686;820;821;830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4640785,
+          50.8947456
+        ]
+      },
+      "type": "Feature",
+      "id": 1161572519,
+      "properties": {
+        "ref:De_Lijn": "305527",
+        "name": "Zaventem B-House",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;505;616;651;652;659;660;681;682;683;686;820;821;830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4819103,
+          50.898045
+        ]
+      },
+      "type": "Feature",
+      "id": 1162032825,
+      "properties": {
+        "bin": "yes",
+        "name:en": "Brussels Airport Platform A",
+        "name": "Zaventem Luchthaven Perron A",
+        "shelter": "yes",
+        "bus": "yes",
+        "wheelchair": "no",
+        "wikipedia": "nl:Brussels Airport",
+        "route_ref:De_Lijn": "272;282;359;471;616;620;621;651;652;659;660;681;682;683;820;821;830",
+        "bench": "yes",
+        "name:fr": "Zaventem Aéroport Quai A",
+        "ref:De_Lijn": "305558",
+        "wikidata": "Q28934",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "operator:wikidata": "Q614819",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4979678,
+          50.8760614
+        ]
+      },
+      "type": "Feature",
+      "id": 1303255434,
+      "properties": {
+        "ref:De_Lijn": "305549",
+        "name": "Zaventem Hoge Wei",
+        "bus": "yes",
+        "route_ref:De_Lijn": "351;358;530;616;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4695243,
+          50.8948401
+        ]
+      },
+      "type": "Feature",
+      "id": 1303255464,
+      "properties": {
+        "ref:De_Lijn": "305530",
+        "name": "Zaventem Gebouw 9",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;505;616;651;652;659;660;681;682;683;686;820;821;830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4961488,
+          50.8756869
+        ]
+      },
+      "type": "Feature",
+      "id": 1303255468,
+      "properties": {
+        "ref:De_Lijn": "305561",
+        "name": "Zaventem Sint-Martinusweg",
+        "bus": "yes",
+        "route_ref:De_Lijn": "351;358;530;616;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4743025,
+          50.8818681
+        ]
+      },
+      "type": "Feature",
+      "id": 1303255546,
+      "properties": {
+        "ref:De_Lijn": "305548",
+        "name": "Zaventem Kerkplein",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;282;352;359;530;531;616;721;830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4751118,
+          50.8962828
+        ]
+      },
+      "type": "Feature",
+      "id": 1303255669,
+      "properties": {
+        "ref:De_Lijn": "308684",
+        "name": "Zaventem Technics Noord",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;282;359;471;616;620;621;651;652;659;660;681;682;683;686;820;821;830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.474196,
+          50.881767
+        ]
+      },
+      "type": "Feature",
+      "id": 1303255716,
+      "properties": {
+        "ref:De_Lijn": "305547",
+        "name": "Zaventem Kerkplein",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;282;352;359;530;531;616;830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4708457,
+          50.8727274
+        ]
+      },
+      "type": "Feature",
+      "id": 1303255804,
+      "properties": {
+        "ref:De_Lijn": "305545",
+        "name": "Zaventem Grote Daalstraat",
+        "bus": "yes",
+        "route_ref:De_Lijn": "352;359;616;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4753342,
+          50.8962741
+        ]
+      },
+      "type": "Feature",
+      "id": 1303255858,
+      "properties": {
+        "ref:De_Lijn": "308683",
+        "name": "Zaventem Technics Noord",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;282;359;471;616;620;621;651;652;659;660;681;682;683;686;830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4698794,
+          50.8947835
+        ]
+      },
+      "type": "Feature",
+      "id": 1303255893,
+      "properties": {
+        "ref:De_Lijn": "305529",
+        "name": "Zaventem Gebouw 9",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;471;505;616;620;621;651;652;659;660;681;682;683;686;820;821;830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4741543,
+          50.8854944
+        ]
+      },
+      "type": "Feature",
+      "id": 1303255912,
+      "properties": {
+        "ref:De_Lijn": "305579",
+        "name": "Zaventem Watertorenlaan",
+        "bus": "yes",
+        "route_ref:De_Lijn": "222;272;282;352;359;505;530;531;616;830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4710511,
+          50.8904046
+        ]
+      },
+      "type": "Feature",
+      "id": 1303255922,
+      "properties": {
+        "ref:De_Lijn": "305577",
+        "name": "Zaventem Vilvoordelaan",
+        "bus": "yes",
+        "route_ref:De_Lijn": "282;359;505;616;682;830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4899428,
+          50.8745478
+        ]
+      },
+      "type": "Feature",
+      "id": 1303256011,
+      "properties": {
+        "bin": "yes",
+        "ref:De_Lijn": "305537",
+        "network": "DLVB",
+        "shelter": "yes",
+        "bus": "yes",
+        "bench": "yes",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "route_ref:De_Lijn": "351;358;530;616;652",
+        "highway": "bus_stop",
+        "name": "Zaventem Facq - Ikea"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4903973,
+          50.8744608
+        ]
+      },
+      "type": "Feature",
+      "id": 1303256095,
+      "properties": {
+        "bin": "yes",
+        "ref:De_Lijn": "305536",
+        "network": "DLVB",
+        "shelter": "yes",
+        "bus": "yes",
+        "bench": "yes",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "route_ref:De_Lijn": "351;358;530;616;652",
+        "highway": "bus_stop",
+        "name": "Zaventem Facq - Ikea"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4712072,
+          50.890537
+        ]
+      },
+      "type": "Feature",
+      "id": 1303256114,
+      "properties": {
+        "ref:De_Lijn": "305576",
+        "name": "Zaventem Vilvoordelaan",
+        "bus": "yes",
+        "route_ref:De_Lijn": "282;359;505;616;682;830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4870276,
+          50.8737637
+        ]
+      },
+      "type": "Feature",
+      "id": 1304208145,
+      "properties": {
+        "ref:De_Lijn": "305571",
+        "name": "Zaventem Sterrebeekstraat",
+        "bus": "yes",
+        "route_ref:De_Lijn": "351;358;530;616;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4728186,
+          50.8785352
+        ]
+      },
+      "type": "Feature",
+      "id": 1304208193,
+      "properties": {
+        "ref:De_Lijn": "307181",
+        "name": "Zaventem Vijvers",
+        "bus": "yes",
+        "route_ref:De_Lijn": "359;616;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4725294,
+          50.8937213
+        ]
+      },
+      "type": "Feature",
+      "id": 1327996508,
+      "properties": {
+        "ref:De_Lijn": "305556",
+        "name": "Zaventem Loodsen",
+        "bus": "yes",
+        "route_ref:De_Lijn": "820;821",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4810762,
+          50.8946921
+        ]
+      },
+      "type": "Feature",
+      "id": 1327996509,
+      "properties": {
+        "ref:De_Lijn": "305555",
+        "name": "Zaventem Technics Zuid",
+        "bus": "yes",
+        "route_ref:De_Lijn": "820;821",
+        "route_ref": "21",
+        "public_transport": "platform",
+        "operator": "De Lijn;STIB/MIVB",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB;IBXL"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4553926,
+          50.8805974
+        ]
+      },
+      "type": "Feature",
+      "id": 1335101874,
+      "properties": {
+        "ref:De_Lijn": "305541",
+        "name": "Zaventem Henneau/Excelsior",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;282;471;620;621;721",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4556626,
+          50.8807778
+        ]
+      },
+      "type": "Feature",
+      "id": 1335101875,
+      "properties": {
+        "ref:De_Lijn": "305540",
+        "name": "Zaventem Henneau/Excelsior",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;282;471;620;621",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.45269,
+          50.880601
+        ]
+      },
+      "type": "Feature",
+      "id": 1335101905,
+      "properties": {
+        "ref:De_Lijn": "305559",
+        "name": "Zaventem Minerva",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;282;471;620;621;721",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4526341,
+          50.880697
+        ]
+      },
+      "type": "Feature",
+      "id": 1335101906,
+      "properties": {
+        "ref:De_Lijn": "305560",
+        "name": "Zaventem Minerva",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;282;471;620;621",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4723283,
+          50.8798107
+        ]
+      },
+      "type": "Feature",
+      "id": 1335101935,
+      "properties": {
+        "bin": "yes",
+        "ref:De_Lijn": "307184",
+        "network": "DLVB",
+        "shelter": "yes",
+        "bus": "yes",
+        "bench": "yes",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "route_ref:De_Lijn": "272;282;652;721",
+        "highway": "bus_stop",
+        "name": "Zaventem Stationsstraat"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4732045,
+          50.8798491
+        ]
+      },
+      "type": "Feature",
+      "id": 1335101937,
+      "properties": {
+        "bin": "yes",
+        "ref:De_Lijn": "307185",
+        "network": "DLVB",
+        "shelter": "yes",
+        "bus": "yes",
+        "bench": "yes",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "route_ref:De_Lijn": "272;282",
+        "highway": "bus_stop",
+        "name": "Zaventem Stationsstraat"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4626957,
+          50.8895706
+        ]
+      },
+      "type": "Feature",
+      "id": 1505299570,
+      "properties": {
+        "ref:De_Lijn": "303550",
+        "name": "Zaventem Hoekplein",
+        "bus": "yes",
+        "route_ref:De_Lijn": "222;272",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4851932,
+          50.8746075
+        ]
+      },
+      "type": "Feature",
+      "id": 1541566242,
+      "properties": {
+        "ref:De_Lijn": "305572",
+        "network": "DLVB",
+        "shelter": "yes",
+        "bus": "yes",
+        "bench": "yes",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "route_ref:De_Lijn": "530;531;830",
+        "highway": "bus_stop",
+        "name": "Zaventem Sterrebeekstraat"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4849221,
+          50.8749508
+        ]
+      },
+      "type": "Feature",
+      "id": 1541566243,
+      "properties": {
+        "ref:De_Lijn": "307044",
+        "network": "DLVB",
+        "shelter": "yes",
+        "bus": "yes",
+        "bench": "yes",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "route_ref:De_Lijn": "530;531;830",
+        "highway": "bus_stop",
+        "name": "Zaventem Sterrebeekstraat"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4760585,
+          50.8840387
+        ]
+      },
+      "type": "Feature",
+      "id": 1573948939,
+      "properties": {
+        "ref:De_Lijn": "307824",
+        "name": "Zaventem Atheneum",
+        "bus": "yes",
+        "route_ref:De_Lijn": "222;505;530;531",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.5108548,
+          50.8709156
+        ]
+      },
+      "type": "Feature",
+      "id": 1599721107,
+      "properties": {
+        "ref:De_Lijn": "307896",
+        "name": "Zaventem Van Ingelgomstraat",
+        "bus": "yes",
+        "route_ref:De_Lijn": "830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4756168,
+          50.88068
+        ]
+      },
+      "type": "Feature",
+      "id": 1599721121,
+      "properties": {
+        "ref:De_Lijn": "305538",
+        "name": "Zaventem Mariadal",
+        "bus": "yes",
+        "route_ref:De_Lijn": "530;531;830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4462595,
+          50.8970653
+        ]
+      },
+      "type": "Feature",
+      "id": 1670512356,
+      "properties": {
+        "ref:De_Lijn": "303541",
+        "name": "Diegem Degeyndtgaarde",
+        "bus": "yes",
+        "route_ref:De_Lijn": "222",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "66",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4540172,
+          50.8660598
+        ]
+      },
+      "type": "Feature",
+      "id": 1810485108,
+      "properties": {
+        "name": "Viaduct E40",
+        "bus": "yes",
+        "name:fr": "Viaduc E40",
+        "route_ref": "42",
+        "public_transport": "platform",
+        "operator": "STIB/MIVB",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4687992,
+          50.887146
+        ]
+      },
+      "type": "Feature",
+      "id": 2129439211,
+      "properties": {
+        "ref:De_Lijn": "306093",
+        "name": "Zaventem Zavo Groenstraat",
+        "bus": "yes",
+        "route_ref:De_Lijn": "505;530;531",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4636551,
+          50.8822223
+        ]
+      },
+      "type": "Feature",
+      "id": 2139336700,
+      "properties": {
+        "ref:De_Lijn": "308829",
+        "name": "Zaventem Hoogstraat",
+        "bus": "yes",
+        "route_ref:De_Lijn": "471;620;621;652;659",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4983089,
+          50.8697394
+        ]
+      },
+      "type": "Feature",
+      "id": 2276034929,
+      "properties": {
+        "ref:De_Lijn": "308550",
+        "name": "Zaventem Brixtonlaan",
+        "bus": "yes",
+        "route_ref:De_Lijn": "830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4927776,
+          50.8697135
+        ]
+      },
+      "type": "Feature",
+      "id": 2276034940,
+      "properties": {
+        "ref:De_Lijn": "308553",
+        "name": "Zaventem Ikea",
+        "bus": "yes",
+        "route_ref:De_Lijn": "830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4927443,
+          50.8698541
+        ]
+      },
+      "type": "Feature",
+      "id": 2276034952,
+      "properties": {
+        "ref:De_Lijn": "308552",
+        "name": "Zaventem Ikea",
+        "bus": "yes",
+        "route_ref:De_Lijn": "830",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4981335,
+          50.8762695
+        ]
+      },
+      "type": "Feature",
+      "id": 2346758066,
+      "properties": {
+        "ref:De_Lijn": "305550",
+        "name": "Zaventem Hoge Wei",
+        "bus": "yes",
+        "route_ref:De_Lijn": "351;358;530;616;652",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "36",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.469737,
+          50.8947414
+        ]
+      },
+      "type": "Feature",
+      "id": 2469061394,
+      "properties": {
+        "ref:De_Lijn": "308980",
+        "name": "Zaventem Gebouw 9",
+        "bus": "yes",
+        "route_ref:De_Lijn": "272;471;620;621;652;659",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4630395,
+          50.8894702
+        ]
+      },
+      "type": "Feature",
+      "id": 2469061397,
+      "properties": {
+        "ref:De_Lijn": "303551",
+        "name": "Zaventem Hoekplein",
+        "bus": "yes",
+        "route_ref:De_Lijn": "222;272;721",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4611669,
+          50.8923961
+        ]
+      },
+      "type": "Feature",
+      "id": 2469061398,
+      "properties": {
+        "ref:De_Lijn": "305553",
+        "name": "Zaventem Olmenstraat",
+        "bus": "yes",
+        "route_ref:De_Lijn": "222;272;471;620;621;652;659",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4696762,
+          50.8860791
+        ]
+      },
+      "type": "Feature",
+      "id": 2469061399,
+      "properties": {
+        "ref:De_Lijn": "303892",
+        "name": "Zaventem Station",
+        "bus": "yes",
+        "route_ref:De_Lijn": "222;272;282;682",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4590633,
+          50.8895141
+        ]
+      },
+      "type": "Feature",
+      "id": 2514522789,
+      "properties": {
+        "ref:De_Lijn": "308687",
+        "name": "Zaventem Da Vinci",
+        "bus": "yes",
+        "route_ref:De_Lijn": "471;620;621;652;659",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4588964,
+          50.8897414
+        ]
+      },
+      "type": "Feature",
+      "id": 2514522790,
+      "properties": {
+        "ref:De_Lijn": "308688",
+        "name": "Zaventem Da Vinci",
+        "bus": "yes",
+        "route_ref:De_Lijn": "471;620;621;652;659",
+        "public_transport": "platform",
+        "operator": "De Lijn",
+        "zone:De_Lijn": "65",
+        "highway": "bus_stop",
+        "network": "DLVB"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4818365,
+          50.8981377
+        ]
+      },
+      "type": "Feature",
+      "id": 3202274132,
+      "properties": {
+        "bin": "yes",
+        "network": "IBXL",
+        "bus": "yes",
+        "wikipedia": "nl:Brussels Airport",
+        "bench": "yes",
+        "route_ref": "21",
+        "public_transport": "platform",
+        "operator": "STIB/MIVB",
+        "wikidata": "Q28934",
+        "operator:wikidata": "Q1631655",
+        "highway": "bus_stop",
+        "name": "Brussels Airport"
+      }
+    }
+  ]
+}
