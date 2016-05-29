@@ -11,8 +11,8 @@ MARVIN is a demonstrator for a nanoservices based application on DC/OS. He got h
 MARVIN comprises three nanoservices (nS):
 
 1. a [calendar proxy nS](nS1/)
-1. an OpenStreetMap lookup service that maps a location/radius to close-by amenities: `(location, radius) --> [close-by-amenity*]`
-1. an amenity recommender service producing time and geo-located suggestions for close-by amenities: `(timeframe, location, radius) --> [close-by-amenity*]`
+1. an OpenStreetMap lookup service that maps a location/radius to close-by amenities: `(location, radius) --> close-by-amenity*`
+1. an amenity recommender service producing time and geo-located suggestions for close-by amenities: `(timeframe, location, radius) --> close-by-amenity*`
 
 Resources used in MARVIN:
 
