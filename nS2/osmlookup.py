@@ -19,6 +19,7 @@ import overpass
 from tornado.escape import json_encode
 
 DEBUG = False
+VERSION = "0.1.0"
 api = overpass.API()
 
 if DEBUG:
