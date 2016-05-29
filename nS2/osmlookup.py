@@ -18,9 +18,8 @@ import overpass
 
 from tornado.escape import json_encode
 
-DEBUG = True
+DEBUG = False
 api = overpass.API()
-
 
 if DEBUG:
   FORMAT = "%(asctime)-0s %(levelname)s %(message)s [at line %(lineno)d]"
@@ -41,8 +40,24 @@ class LookupAPIHandler(tornado.web.RequestHandler):
             logging.debug("OQL: %s" %(oql))
             lres = api.Get(oql)
             if lres:
-                self.set_header("Content-Type", "text/plain")
-                self.write(lres)
+                self.set_header("Content-Type", "application/json")
+                ptfs = [] # the public transport facility list
+                for f in lres["features"]:
+                    p = f["properties"]
+                    k = "unknown"
+                    if p["highway"]:
+                        k = p["highway"]
+                    g = f["geometry"]
+                    c = g["coordinates"]
+                    ptf = { 
+                        "id" : f["id"], 
+                        "name" : p["name"], 
+                        "kind" : k, 
+                        "lat" : c[1], 
+                        "lon" : c[0]
+                    }
+                    ptfs.append(ptf)
+                self.write(json_encode(ptfs))
                 self.finish()
             else:
                 self.set_status(404)

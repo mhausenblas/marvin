@@ -1,10 +1,10 @@
 # nS2: OpenStreetMap Lookup Nano Service
 
-This nS is written in Python and that maps a location/radius to close-by amenities:
+This nS is written in Python and maps a location and radius to close-by public transport facilities:
 
     (location, radius) --> close-by-amenity*
 
-The response of nS2 is a JSON document, a list of close-by amenities for a location in the following format:
+The response of nS2 is a JSON document (a list of close-by facilities) in the following format:
 
     [
       ...
@@ -25,7 +25,32 @@ See also http://overpass-turbo.eu for interactive testing and mapping.
 
 ## Usage
 
-To get the amenities for a certain location (note that the default radius is 100m, so `closeby/brussels` is really the same as `closeby/brussels?radius=100` ):
+To get close-by public transport facilities for the area called `Zaventem` with a `50m` radius:
 
-    http localhost:8989/closeby/brussels?radius=500
+    $ http localhost:8989/closeby/Zaventem?radius=50
+    HTTP/1.1 200 OK
+    Content-Length: 8223
+    Content-Type: application/json
+    Date: Sun, 29 May 2016 18:03:31 GMT
+    Etag: "4230b265ce8123c7be5a903bc70d750a59aa997e"
+    Server: TornadoServer/4.3
+    
+    [
+        {
+            "id": 144913426,
+            "kind": "bus_stop",
+            "lat": 50.8720864,
+            "lon": 4.4774319,
+            "name": "Zaventem De Vlemincklaan"
+        },
+        ...
+        {
+                "id": 3202274132,
+                "kind": "bus_stop",
+                "lat": 50.8981377,
+                "lon": 4.4818365,
+                "name": "Brussels Airport"
+        }
+    ]
 
+Note that the default radius is 100m, so `closeby/Zaventem` is really the same as `closeby/Zaventem?radius=100`
