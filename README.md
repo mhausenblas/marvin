@@ -12,11 +12,13 @@ MARVIN comprises three nanoservices (nS):
 
 1. a [calendar proxy nS](nS1/)
 1. an [OpenStreetMap lookup nS](nS2/)
-1. an amenity recommender service producing time and geo-located suggestions for close-by amenities: `(timeframe, location, radius) --> close-by-amenity*`
+1. an [close-by public transport recommender nS](nS3/)
 
 Resources used in MARVIN:
 
 - a default [Google calendar](https://calendar.google.com/calendar/ical/r5sj91351jcgb0gul5h0tvou7o%40group.calendar.google.com/public/basic.ics)
+- OpenStreetMap, to be precise the [Overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API/)
+
 
 ## Installation
 

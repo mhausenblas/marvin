@@ -1,6 +1,6 @@
 # nS2: OpenStreetMap Lookup Nano Service
 
-This nS is written in python and that maps a location/radius to close-by amenities:
+This nS is written in Python and that maps a location/radius to close-by amenities:
 
     (location, radius) --> close-by-amenity*
 
