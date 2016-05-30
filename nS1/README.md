@@ -41,7 +41,7 @@ To build the Linux ELF executable:
 
 ## Usage
 
-To pull data from the calendar:
+To pull data from the calendar (need to do that at least one time before you can look up events):
 
     $ http localhost:9999/sync
     HTTP/1.1 200 OK

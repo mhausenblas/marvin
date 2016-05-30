@@ -22,7 +22,7 @@ const TEST_RESPONSE = [{
 
 const app = express();
 
-// CORS enable the API for ease of consumption from a browser app
+// CORS-enable the API for ease of consumption from a browser app
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -52,43 +52,48 @@ function getJSON(options, onResult) {
   req.end();
 };
 
-
-
 function getEvents(res) {
-  var lookupDate = new Date().toISOString().slice(0,10);
-  var events;
+  var lookupDate = new Date().toISOString().slice(0,10); // extract the YYYY-MM-DD part
   var eventsLookupCall = {
       host: 'localhost',
       port: 9999,
       path: '/events?date='+lookupDate,
       method: 'GET'
   };
-  console.log('Looking up events for today, that is: ' + lookupDate);
-  getJSON(eventsLookupCall, function(statusCode, result) {
-    console.log(JSON.stringify(result));
-    if (result[0]["loc"] != "") {
-      getCloseByPTFs(res, result[0]["loc"]);
-    }
-    else {
-      res.json(result);
-    }
+  console.info('Looking up events for today, that is: ' + lookupDate);
+  getJSON(eventsLookupCall, function(statusCode, events) {
+    console.log(JSON.stringify(events));
+    getCloseByPTFs(res, events);
   });
 }
 
-function getCloseByPTFs(res, loc) {
-  var closebyPTFCall = {
-      host: 'localhost',
-      port: 8989,
-      path: '/closeby/'+loc,
-      method: 'GET'
-  };
-  console.log('Looking up close-by public transport facilities for: ' + loc);
-  getJSON(closebyPTFCall, function(statusCode, result) {
-    console.log(JSON.stringify(result));
-    res.json(result);
+function getCloseByPTFs(res, events) {
+  var out = [];
+  var count = 0;
+  events.forEach(function(event){
+    var loc = event["loc"];
+    var closebyPTFCall = {
+        host: 'localhost',
+        port: 8989,
+        path: '/closeby/' + loc,
+        method: 'GET'
+    };
+    count++;
+    console.info('Looking at event #' + count);
+    if (loc != ''){
+      console.log('Looking up close-by public transport facilities for: ' + loc);
+      getJSON(closebyPTFCall, function(statusCode, closeby) {
+        // console.log(JSON.stringify(closeby));
+        event.closeby = closeby;
+        out.push(event);
+        if(count == events.length) { // we're done with the events list
+          console.log('Done with lookups');
+          res.json(out); // ... return with the composite JSON result
+        }
+      });
+    }
   });
 }
 
 app.listen(PORT);
-console.log('This is MARVIN recommender running on http://localhost:' + PORT);
-//TODO: CAL SYNC
+console.info('This is MARVIN nanoservice [Close-by Public Transport Recommender] listening on port ' + PORT);

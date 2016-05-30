@@ -20,6 +20,7 @@ from tornado.escape import json_encode
 
 DEBUG = False
 VERSION = "0.1.0"
+PORT = 8989
 api = overpass.API()
 
 if DEBUG:
@@ -77,5 +78,5 @@ if __name__ == "__main__":
         (r"/closeby/(.*)", LookupAPIHandler)
     ])
     app.listen(8989)
-    print("This is MARVIN OSM lookup v%s" %(VERSION))
+    print("This is  MARVIN nanoservice [OpenStreetMap Lookup] v%s listening on port %s" %(VERSION, PORT))
     tornado.ioloop.IOLoop.current().start()

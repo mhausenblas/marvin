@@ -12,6 +12,8 @@ The response of nS3 is a JSON document in the following format:
       ...
     ]
 
+This nS uses [Express](http://expressjs.com/en/4x/api.html).
+
 ## Build & Execute
 
 You will need Node.js installed; I've been using `v5.10.1` in development. As a preparation, you need to do an `npm install`. Then you can execute the nS like so:

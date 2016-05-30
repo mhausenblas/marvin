@@ -34,7 +34,7 @@ func main() {
 	if fc := os.Getenv("MARVIN_CAL_URL"); fc != "" {
 		forcal = fc
 	}
-	fmt.Printf("This is the MARVIN nanoservice [Calendar Proxy] in version %s\n", VERSION)
+	fmt.Printf("This is the MARVIN nanoservice [Calendar Proxy] in version %s listening on port 9999\n", VERSION)
 	fmt.Printf("Proxying the following calendar:\n%s\n", forcal)
 	parser := ics.New()
 
