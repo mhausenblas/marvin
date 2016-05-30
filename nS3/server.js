@@ -3,6 +3,8 @@
 const express = require('express');
 const http = require("http");
 const https = require("https");
+const async = require("async");
+
 
 const PORT = 8787;
 
@@ -30,72 +32,70 @@ app.use(function(req, res, next) {
 });
 
 app.get('/rec', function(req, res) {
-  var events = getEvents(res);
+  getEvents(res);
 });
 
-// lifted from http://stackoverflow.com/questions/9577611/http-get-request-in-node-js-express
-function getJSON(options, onResult) {
-  var prot = options.port == 443 ? https : http;
-  var req = prot.request(options, function(res){
-    var output = '';
-    res.setEncoding('utf8');
-    res.on('data', function (chunk) {
-            output += chunk;
-    });
-    res.on('end', function() {
-      var obj = JSON.parse(output);
-      onResult(res.statusCode, obj);
-    });
-  });
-  req.on('error', function(err) {
-  });
-  req.end();
-};
+function getData(host, port, path, callback){
+  return http.get({
+            host: host,
+            port: port,
+            path: path,
+            json: true
+          }, function(response) {
+                var body = '';
+                response.setEncoding('utf8');
+                response.on('data', function(d) {
+                  body += d;
+                });
+                response.on('end', function() {
+                  try {
+                    var data = JSON.parse(body);
+                  }
+                  catch (err) {
+                    console.error('Unable to parse data: ', err);
+                    return callback(err);
+                  }
+                  callback(null, data);
+                });
+          }).on('error', function(err) {
+              console.error('Error with request: ', err.message);
+              cb(err);
+          });
+}
 
 function getEvents(res) {
   var lookupDate = new Date().toISOString().slice(0,10); // extract the YYYY-MM-DD part
-  var eventsLookupCall = {
-      host: 'localhost',
-      port: 9999,
-      path: '/events?date='+lookupDate,
-      method: 'GET'
-  };
+  var out = [];
   console.info('Looking up events for today, that is: ' + lookupDate);
-  getJSON(eventsLookupCall, function(statusCode, events) {
-    console.log(JSON.stringify(events));
-    getCloseByPTFs(res, events);
-  });
+  getData('localhost', 9999, '/events?date='+lookupDate, function(err, events){
+    if (err) res.status(404).end();
+    else {
+      async.each(events,
+        function(event, callback){
+          var loc = event["loc"];
+          console.info('Looking at event ' + event["title"]);
+          if (loc != ''){
+            console.log('Looking up close-by public transport facilities for: ' + loc);
+            getData('localhost', 8989, '/closeby/'+encodeURIComponent(loc.trim()), function(err, closeby){
+              if (err) res.status(404).end();
+              else {
+                if (closeby){
+                  event.closeby = closeby;
+                }
+                out.push(event);
+                callback();
+              }
+            });
+          }
+        },
+        function(err){
+          res.json(out);
+          res.end();
+        });
+      }
+    });
 }
 
-function getCloseByPTFs(res, events) {
-  var out = [];
-  var count = 0;
-  events.forEach(function(event){
-    var loc = event["loc"];
-    var closebyPTFCall = {
-        host: 'localhost',
-        port: 8989,
-        path: '/closeby/' + encodeURIComponent(loc.trim()),
-        method: 'GET'
-    };
-    count++;
-    console.info('Looking at event #' + count);
-    if (loc != ''){
-      console.log('Looking up close-by public transport facilities for: ' + loc);
-      getJSON(closebyPTFCall, function(statusCode, closeby) {
-        // console.log(JSON.stringify(closeby));
-        event.closeby = closeby;
-        out.push(event);
-        if(count == events.length) { // we're done with the events list
-          console.log('Done with lookups');
-          res.json(out); // ... return with the composite JSON result
-          return
-        }
-      });
-    }
-  });
-  res.json([]);
-}
 
 app.listen(PORT);
 console.info('This is MARVIN nanoservice [Close-by Public Transport Recommender] listening on port ' + PORT);

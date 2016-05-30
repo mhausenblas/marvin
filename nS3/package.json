@@ -1,6 +1,6 @@
 {
   "name": "marvin_rec",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "MARVIN close-by public transport recommender nanoservice",
   "author": "Michael Hausenblas <michael@dcos.io>",
   "main": "server.js",
@@ -8,6 +8,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "async": "~0.2.9"
   }
 }

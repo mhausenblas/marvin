@@ -35,12 +35,14 @@ h1 a {
 }
 
 #getrec {
+  font-weight: 100;
+  color: #323A4E;
   cursor: pointer;
   width: 400px;
   padding: 10px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
   border:1px solid #9351E5;
   background:rgba(147,81,229,0.1);
   -webkit-box-shadow: #0A050F 4px 4px 4px;
@@ -51,6 +53,7 @@ h1 a {
 
 #about{
   font-size: 8pt;
+  cursor: pointer;
   position: fixed;
   top: 10px;
   right: 10px;
@@ -70,6 +73,11 @@ h1 a {
   margin: 5px 0 10px 0;  
 }
 
+.cl {
+  clear: both;
+  margin: 0 0 50px 0;
+}
+
 .date {
   color: #9351E5;
   margin: 0 50px 0 0;
@@ -86,7 +94,7 @@ h1 a {
   padding: 2px 0 5px 10px;
   font-weight: 300;
   font-size: 60%;
-  width: 200px;
+  width: 130px;
   float: left;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -98,4 +106,9 @@ h1 a {
 
 .ptf div {
   margin: 5px 0 10px 0;  
+}
+
+.ptf img {
+  margin: 10px 0 0 0;
+  text-align: center;
 }

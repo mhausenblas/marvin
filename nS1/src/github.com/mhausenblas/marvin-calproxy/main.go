@@ -7,11 +7,12 @@ import (
 	log "github.com/Sirupsen/logrus"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 )
 
 const (
-	VERSION         string = "0.2.0"
+	VERSION         string = "0.3.0"
 	DEFAULT_CAL_URL string = "https://calendar.google.com/calendar/ical/r5sj91351jcgb0gul5h0tvou7o%40group.calendar.google.com/public/basic.ics"
 	DAY_PARAM       string = "date"
 )
@@ -28,6 +29,10 @@ type CalProxyResult struct {
 	Location   string    `json:"loc"`
 }
 
+func sanitize(loc string) string {
+	return strings.Replace(loc, "\\", " ", -1)
+}
+
 func main() {
 	mux = http.NewServeMux()
 	forcal = DEFAULT_CAL_URL
@@ -35,14 +40,23 @@ func main() {
 		forcal = fc
 	}
 	fmt.Printf("This is the MARVIN nanoservice [Calendar Proxy] in version %s listening on port 9999\n", VERSION)
-	fmt.Printf("Proxying the following calendar:\n%s\n", forcal)
+	fmt.Printf("Proxying calendar:\n%s\n", forcal)
 	parser := ics.New()
 
 	mux.HandleFunc("/sync", func(w http.ResponseWriter, r *http.Request) {
 		inputChan := parser.GetInputChan()
 		inputChan <- DEFAULT_CAL_URL
 		parser.Wait()
-		log.WithFields(log.Fields{"handle": "/sync"}).Info("Pulled events from ", DEFAULT_CAL_URL)
+		log.WithFields(log.Fields{"handle": "/sync"}).Info("Parsing calendar data done")
+		time.Sleep(time.Second * 1) // wait a bit for parsing to finish
+		cal, err := parser.GetCalendars()
+		if err == nil {
+			for _, calendar := range cal {
+				log.WithFields(log.Fields{"handle": "/sync"}).Info("Got data from ", calendar.GetName(), " with ", len(calendar.GetEvents()), " events")
+			}
+		} else {
+			log.WithFields(log.Fields{"handle": "/sync"}).Error("Can't parse calendar due to ", err)
+		}
 	})
 
 	mux.HandleFunc("/events", func(w http.ResponseWriter, r *http.Request) {
@@ -52,7 +66,7 @@ func main() {
 			log.WithFields(log.Fields{"handle": "/events"}).Info("Got day param ", day)
 			t, errp := time.Parse("2006-01-02", day)
 			if errp == nil {
-				log.WithFields(log.Fields{"handle": "/"}).Info("Looking up events for ", t)
+				log.WithFields(log.Fields{"handle": "/events"}).Info("Looking up events for ", t)
 				eres := []CalProxyResult{}
 				for _, calendar := range cal {
 					eventsForDay, _ := calendar.GetEventsByDate(t)
@@ -63,7 +77,7 @@ func main() {
 							Title:      e.GetSummary(),
 							Eventstart: e.GetStart(),
 							Eventend:   e.GetEnd(),
-							Location:   e.GetLocation(),
+							Location:   sanitize(e.GetLocation()),
 						}
 						eres = append(eres, *c)
 					}
@@ -71,7 +85,7 @@ func main() {
 				eresj, _ := json.Marshal(eres)
 				fmt.Fprint(w, string(eresj))
 			} else {
-				log.WithFields(log.Fields{"handle": "/"}).Error("Can't parse day due to ", errp)
+				log.WithFields(log.Fields{"handle": "/events"}).Error("Can't parse day due to ", errp)
 			}
 		}
 	})
