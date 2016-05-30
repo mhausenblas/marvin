@@ -40,7 +40,8 @@ function getRecs() {
           console.debug('PTF' + ptf.name);
           buf = '<div class="ptf"><h3>' + ptf.name + '</h3>';
           buf +='<div>' + ptf.kind +'</div>';
-          buf +='<div><a href="http://www.openstreetmap.org/?mlat=' + ptf.lat + '&mlon=' + ptf.lon + '#map=16/' + ptf.lat + '/' + ptf.lon + '" target="_new">view on map</a></div>';
+          buf +='<div><a href="http://www.openstreetmap.org/?mlat=' + ptf.lat + '&mlon=' + ptf.lon + '#map=16/' + ptf.lat + '/' + ptf.lon + '" target="_new">';
+          buf +='<img src="img/map.png" alt="view on map" /></div>';
           buf += '</div>';
           $('#out').append(buf);
         });

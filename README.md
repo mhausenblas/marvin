@@ -31,7 +31,7 @@ Deploy using [dploy](http://dploy.sh): TBD
 
 Once MARVIN is deployed you can go to the front-end and view the recommendations for public transport facilities that are close-by your events:
 
-![MARVIN system architecture](img/frontend.jpg)
+![MARVIN system architecture](img/frontend.png)
 
 ## Testing
 
