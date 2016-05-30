@@ -20,6 +20,7 @@ The response of nS1 is a JSON document, a list of events for a day in the follow
 
 You will need Go installed; I've been using `go1.6.2 darwin/amd64` in development. As a preparation, you need to do:
 
+- `export GOPATH=/Users/mhausenblas/Documents/repos/mhausenblas/marvin/nS1` (with your directory)
 - `go get github.com/PuloV/ics-golang` to make the ics parser available
 - `go get github.com/Sirupsen/logrus` to make the logger available
 
@@ -33,7 +34,10 @@ Note that if you want to use a different calendar, other than the [default](http
 
 To build the Linux ELF executable:
 
-    $ GOOS=linux go build
+    $ cd $GOPATH
+    $ GOOS=linux go build github.com/mhausenblas/marvin-calproxy
+    $ file marvin-calproxy
+    marvin-calproxy: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, not stripped
 
 ## Usage
 
