@@ -18,8 +18,8 @@ import overpass
 
 from tornado.escape import json_encode
 
-DEBUG = False
-VERSION = "0.1.0"
+DEBUG = True
+VERSION = "0.2.0"
 PORT = 8989
 api = overpass.API()
 
@@ -46,25 +46,29 @@ class LookupAPIHandler(tornado.web.RequestHandler):
                 ptfs = [] # the public transport facility list
                 for f in lres["features"]:
                     p = f["properties"]
-                    k = "unknown"
-                    if p["highway"]:
-                        k = p["highway"]
+                    desc = ""
+                    if "highway" in p:
+                        desc = p["highway"]
+                    if "operator" in p:
+                        desc = desc + " " + p["operator"]
                     g = f["geometry"]
                     c = g["coordinates"]
                     ptf = { 
                         "id" : f["id"], 
                         "name" : p["name"], 
-                        "kind" : k, 
+                        "kind" : desc, 
                         "lat" : c[1], 
                         "lon" : c[0]
                     }
+                    logging.debug("PTF name: %s kind: %s" %(p["name"], desc))
                     ptfs.append(ptf)
                 self.write(json_encode(ptfs))
                 self.finish()
             else:
+                logging.debug("No close-by things found")
                 self.set_status(404)
         except Exception, e:
-            logging.error(e)
+            logging.debug(e)
             self.set_status(404)
 
 def _make_app():

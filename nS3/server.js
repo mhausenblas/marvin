@@ -75,7 +75,7 @@ function getCloseByPTFs(res, events) {
     var closebyPTFCall = {
         host: 'localhost',
         port: 8989,
-        path: '/closeby/' + loc,
+        path: '/closeby/' + encodeURIComponent(loc.trim()),
         method: 'GET'
     };
     count++;
@@ -89,10 +89,12 @@ function getCloseByPTFs(res, events) {
         if(count == events.length) { // we're done with the events list
           console.log('Done with lookups');
           res.json(out); // ... return with the composite JSON result
+          return
         }
       });
     }
   });
+  res.json([]);
 }
 
 app.listen(PORT);

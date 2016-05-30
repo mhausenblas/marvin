@@ -1,8 +1,10 @@
 var MARVIN_REC_SERVICE = "rec-marvin.marathon.mesos";
 var BASE_URL = '';
+var lookupDate = new Date().toISOString().slice(0,10);
 
 // main event loop
 $(document).ready(function() {
+  $('#today').html(lookupDate);
   serviceDiscovery();
   $("#getrec").click(function(event) {
     getRecs();
@@ -17,35 +19,35 @@ function serviceDiscovery() {
 
 function getRecs() {
   var apicallGET = BASE_URL + '/rec';
-  // $.get(apicallGET, function(d) {
-  //   console.debug("GET " + apicallGET);
-  //   if (d) {
-  //     $('#out').html('<pre>' + d + '</pre>');
-  //   }
-  // });
-  var d = getTestData();
-  var buf = "";
-  var ptfs = [];
-  d.forEach(function(event){
-      console.debug('Event: ' + event.title);
-      buf = '<div class="event"><h2>' + event.title + '</h2>';
-      buf += '<div>Start: <span class="date">' + event.start.split('T')[1] + '</span> ';
-      buf += '     End: <span class="date">' + event.end.split('T')[1] + '</span></div>';
-      buf += '<div>Location: <span class="loc">' + event.loc + '</span></div>';
-      buf += '</div>';
-      $('#out').append(buf);
-      ptfs = event["closeby"];
-      if (ptfs) {
-        ptfs.forEach(function(ptf){
-          console.debug('PTF' + ptf.name);
-          buf = '<div class="ptf"><h3>' + ptf.name + '</h3>';
-          buf +='<div>' + ptf.kind +'</div>';
-          buf +='<div><a href="http://www.openstreetmap.org/?mlat=' + ptf.lat + '&mlon=' + ptf.lon + '#map=16/' + ptf.lat + '/' + ptf.lon + '" target="_new">';
-          buf +='<img src="img/map.png" alt="view on map" /></div>';
+  $('#out').html('<img src="img/wait.gif" width="32px" alt="Getting recommendations, may take some 20sec ..." />');
+  $.get(apicallGET, function(d) {
+    var buf = "";
+    var ptfs = [];
+    console.debug("GET " + apicallGET);
+    // d = getTestData();
+    if (d) {
+      d.forEach(function(event){
+          console.debug('Event: ' + event.title);
+          buf = '<div class="event"><h2>' + event.title + '</h2>';
+          buf += '<div>Start: <span class="date">' + event.start.split('T')[1] + '</span> ';
+          buf += '     End: <span class="date">' + event.end.split('T')[1] + '</span></div>';
+          buf += '<div>Location: <span class="loc">' + event.loc + '</span></div>';
           buf += '</div>';
           $('#out').append(buf);
-        });
-      }
+          ptfs = event["closeby"];
+          if (ptfs) {
+            ptfs.forEach(function(ptf){
+              console.debug('PTF' + ptf.name);
+              buf = '<div class="ptf"><h3>' + ptf.name + '</h3>';
+              buf +='<div>' + ptf.kind +'</div>';
+              buf +='<div><a href="http://www.openstreetmap.org/?mlat=' + ptf.lat + '&mlon=' + ptf.lon + '#map=16/' + ptf.lat + '/' + ptf.lon + '" target="_new">';
+              buf +='<img src="img/map.png" alt="view on map" /></div>';
+              buf += '</div>';
+              $('#out').append(buf);
+            });
+          }
+      });
+    }
   });
 }
 
