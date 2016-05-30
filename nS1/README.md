@@ -18,7 +18,7 @@ The response of nS1 is a JSON document, a list of events for a day in the follow
 
 ## Build & Execute
 
-As a preparation, you need to do:
+You will need Go installed; I've been using `go1.6.2 darwin/amd64` in development. As a preparation, you need to do:
 
 - `go get github.com/PuloV/ics-golang` to make the ics parser available
 - `go get github.com/Sirupsen/logrus` to make the logger available

@@ -2,9 +2,9 @@
 
 This nS is written in Python and maps a location and radius to close-by public transport facilities:
 
-    (location, radius) --> close-by-amenity*
+    (location, radius) --> close-by-ptf*
 
-The response of nS2 is a JSON document (a list of close-by facilities) in the following format:
+The response of nS2 is a JSON document (a list of close-by public transport facilities) in the following format:
 
     [
       {
@@ -29,6 +29,17 @@ The nS2 uses the [Overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API/
     out body;
 
 See also http://overpass-turbo.eu for interactive testing and mapping.
+
+
+## Build & Execute
+
+There's no build step but you will need Python installed; I've been using `2.7.9` in development. You can execute the nS like so:
+
+    $ python osmlookup.py
+
+Or the containerized version:
+
+    $ docker run -P mhausenblas/marvin-lookup
 
 ## Usage
 
