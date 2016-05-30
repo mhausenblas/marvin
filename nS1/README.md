@@ -23,13 +23,17 @@ You will need Go installed; I've been using `go1.6.2 darwin/amd64` in developmen
 - `go get github.com/PuloV/ics-golang` to make the ics parser available
 - `go get github.com/Sirupsen/logrus` to make the logger available
 
-Then, build and execute:
+Then to execute:
 
     $ go install && ../../../../bin/marvin-calproxy
 
 Note that if you want to use a different calendar, other than the [default](https://calendar.google.com/calendar/ical/r5sj91351jcgb0gul5h0tvou7o%40group.calendar.google.com/public/basic.ics) one, use the `MARVIN_CAL_URL` environment variable on startup to specify it:
 
     $ MARVIN_CAL_URL=http://example.com/mycal.ics marvin-calproxy
+
+To build the Linux ELF executable:
+
+    $ GOOS=linux go build
 
 ## Usage
 
