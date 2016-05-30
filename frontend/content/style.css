@@ -1,0 +1,80 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14pt;
+    margin: 0em auto;
+    padding: 0;
+    width: 90%;
+    text-align: justify;
+}
+
+h1 {
+    color: #323A4E;
+    font-size: 200%;
+    font-weight: 400;
+}
+
+h2 {
+    color: #9351E5;
+    font-size: 160%;
+    font-weight: 200;
+}
+
+h3 {
+    color: #9351E5;
+    font-size: 120%;
+    font-weight: 100;
+}
+
+#out {
+  margin: 50px 0 0 0;
+  padding: 0px;
+}
+
+#getrec {
+  cursor: pointer;
+  width: 300px;
+  padding: 10px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border:1px solid #9351E5;
+  background:rgba(147,81,229,0.1);
+  -webkit-box-shadow: #0A050F 4px 4px 4px;
+  -moz-box-shadow: #0A050F 4px 4px 4px;
+  box-shadow: #0A050F 4px 4px 4px;
+  text-align: center;
+}
+
+.event {
+  margin: 0;
+  padding: 5px;
+  border-top: 1px solid #9351E5;
+  font-weight: 300;
+  font-size: 80%;
+}
+
+.event div {
+  margin: 5px 0 10px 0;  
+}
+
+.date {
+  color: #9351E5;
+  margin: 0 50px 0 0;
+}
+
+.loc {
+  font-weight: 400;
+  color: #9351E5;
+}
+
+.ptf {
+  margin: 0;
+  padding: 2px;
+  border-top: 1px dotted #9351E5;
+  font-weight: 300;
+  font-size: 60%;
+}
+
+.ptf div {
+  margin: 5px 0 10px 0;  
+}
