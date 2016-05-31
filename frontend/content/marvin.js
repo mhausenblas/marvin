@@ -1,3 +1,4 @@
+var VERSION = '0.2.0';
 var MARVIN_REC_DPID = '/marvin/rec';
 var MARVIN_REC_URL = '';
 var lookupDate = new Date().toISOString().slice(0, 10);
@@ -5,6 +6,7 @@ var lookupDate = new Date().toISOString().slice(0, 10);
 // main event loop
 $(document).ready(function() {
   $('#today').html(lookupDate);
+  $('#about').prepend('This is v' + VERSION + '<br>');
   serviceDiscovery();
   $("#getrec").click(function(event) {
     getRecs();
@@ -17,7 +19,7 @@ $(document).ready(function() {
 // Using see also https://github.com/mhausenblas/go2
 function serviceDiscovery() {
   var apicall = 'http://' + window.location.hostname + ':6969'; // GO2 endpoint
-  console.info('Discovering endpoint for ' + MARVIN_REC_DPID);
+  console.info('Discovering endpoint for ' + MARVIN_REC_DPID + ' via ' + apicall);
   $.get(apicall, function(d) {
     console.debug("GET " + apicallGET);
     if (d) {
