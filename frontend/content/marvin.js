@@ -1,4 +1,4 @@
-var VERSION = '0.2.1';
+var VERSION = '0.3.0';
 var MARVIN_REC_DPID = '/marvin/rec';
 var MARVIN_REC_URL = '';
 var lookupDate = new Date().toISOString().slice(0, 10);
@@ -21,7 +21,7 @@ function serviceDiscovery() {
   var apicall = 'http://' + window.location.hostname + ':6969'; // GO2 endpoint
   console.info('Discovering endpoint for ' + MARVIN_REC_DPID + ' via ' + apicall);
   $.get(apicall, function(d) {
-    console.debug("GET " + apicallGET);
+    console.debug("GET " + apicall);
     if (d) {
       MARVIN_REC_URL = d;
       console.debug('Resolved MARVIN recommender service with DPID ' + MARVIN_REC_DPID + ' to ' + MARVIN_REC_URL);
@@ -60,7 +60,7 @@ function renderResults(events){
 }
 
 function getRecs() {
-  var apicall = BASE_URL + '/rec';
+  var apicall = MARVIN_REC_URL + '/rec';
   $('#out').html('<img src="img/wait.gif" width="32px" alt="Getting recommendations, may take some 20sec ..." />');
   $.get(apicall, function(d) {
     console.debug("GET " + apicall);
