@@ -1,4 +1,4 @@
-var VERSION = '0.2.0';
+var VERSION = '0.2.1';
 var MARVIN_REC_DPID = '/marvin/rec';
 var MARVIN_REC_URL = '';
 var lookupDate = new Date().toISOString().slice(0, 10);
