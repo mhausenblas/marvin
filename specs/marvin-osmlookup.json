@@ -1,0 +1,19 @@
+{
+  "id": "/marvin/osmlookup",
+  "cpus": 0.2,
+  "mem": 100,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "mhausenblas/marvin-lookup:0.2.0",
+      "forcePullImage": true,
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 8989,
+          "hostPort": 0
+        }
+      ]
+    }
+  }
+}

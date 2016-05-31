@@ -1,0 +1,12 @@
+{
+  "id": "/marvin/events",
+  "cmd": "chmod u+x marvin-calproxy && ./marvin-calproxy",
+  "cpus": 0.2,
+  "mem": 200,
+  "ports": [
+    9999
+  ],
+  "uris": [
+    "https://github.com/mhausenblas/marvin/raw/master/nS1/marvin-calproxy"
+  ]
+}

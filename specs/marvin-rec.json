@@ -1,0 +1,19 @@
+{
+  "id": "/marvin/rec",
+  "cpus": 0.2,
+  "mem": 100,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "mhausenblas/marvin-rec:0.3.0",
+      "forcePullImage": true,
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 8787,
+          "hostPort": 0
+        }
+      ]
+    }
+  }
+}

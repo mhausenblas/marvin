@@ -1,0 +1,19 @@
+{
+  "id": "/marvin/frontend",
+  "cpus": 0.1,
+  "mem": 50,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "mhausenblas/marvin-frontend:0.2.0",
+      "forcePullImage": true,
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 0
+        }
+      ]
+    }
+  }
+}

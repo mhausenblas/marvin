@@ -1,0 +1,16 @@
+{
+  "id": "/marvin/go2",
+  "cmd": "chmod u+x go2 && ./go2",
+  "cpus": 0.1,
+  "mem": 32,
+  "ports": [
+    6969
+  ],
+  "requirePorts" : true,
+  "uris": [
+    "https://raw.githubusercontent.com/mhausenblas/go2/master/go2"
+  ],
+  "acceptedResourceRoles": [
+    "slave_public"
+  ]
+}
