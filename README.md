@@ -1,6 +1,8 @@
 # MARVIN
 
-MARVIN is a demonstrator for a nanoservices based application on DC/OS. He got his name from another famous [Marvin](http://hitchhikers.wikia.com/wiki/Marvin) …
+MARVIN is a simple, non-trivial yet complete nanoservices example on DC/OS. He got his name from another famous [Marvin](http://hitchhikers.wikia.com/wiki/Marvin). MARVIN provides recommendations for close-by public transport 
+facilities such as bus stops for the events in a calendar provided. You can think of it as a sort of very specialized 
+spatio-temporal personal assistant. 
 
 ![MARVIN logo](img/marvin.jpg)
 
