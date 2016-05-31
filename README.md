@@ -8,11 +8,12 @@ MARVIN is a demonstrator for a nanoservices based application on DC/OS. He got h
 
 ![MARVIN system architecture](img/sysarch.png)
 
-MARVIN comprises three nanoservices (nS):
+MARVIN comprises:
 
-1. a [calendar proxy nS](nS1/)
-1. an [OpenStreetMap lookup nS](nS2/)
-1. an [close-by public transport recommender nS](nS3/)
+1. a calendar proxy nanoservices [nS1](nS1/)
+1. an OpenStreetMap lookup nanoservices [nS2](nS2/)
+1. an public transport facilities (PTF) recommender nanoservices [nS3](nS3/)
+1. a frontend, a NGINX-based Web app [frontend](frontend/)
 
 Resources used in MARVIN:
 
