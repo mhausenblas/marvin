@@ -5,14 +5,13 @@ const http = require("http");
 const https = require("https");
 const async = require("async");
 
-
 const PORT = 8787;
 
 const TEST_RESPONSE = [{
   'title': 'test',
   'start': '2016-06-02T15:00:00Z',
   'end': '2016-06-02T15:30:00Z',
-  'loc': 'Solingen\\, Germany',
+  'loc': 'Solingen, Germany',
   'closeby': [{
     'id': 144913426,
     'kind': 'bus_stop',

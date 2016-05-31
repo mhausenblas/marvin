@@ -1,5 +1,5 @@
-var MARVIN_REC_SERVICE = "rec-marvin.marathon.mesos";
-var BASE_URL = '';
+var MARVIN_REC_DPID = '/marvin/rec';
+var MARVIN_REC_URL = '';
 var lookupDate = new Date().toISOString().slice(0, 10);
 
 // main event loop
@@ -14,10 +14,19 @@ $(document).ready(function() {
   });
 });
 
+// Using see also https://github.com/mhausenblas/go2
 function serviceDiscovery() {
-  var apicall = MARVIN_REC_SERVICE;
-  console.info('Discovering endpoint for ' + MARVIN_REC_SERVICE);
-  BASE_URL = "http://localhost:8787";
+  var apicall = 'http://' + window.location.hostname + ':6969'; // GO2 endpoint
+  console.info('Discovering endpoint for ' + MARVIN_REC_DPID);
+  $.get(apicall, function(d) {
+    console.debug("GET " + apicallGET);
+    if (d) {
+      MARVIN_REC_URL = d;
+      console.debug('Resolved MARVIN recommender service with DPID ' + MARVIN_REC_DPID + ' to ' + MARVIN_REC_URL);
+     } else {
+      $('#out').html('<div class="event">Can not find MARVIN recommender service :(</div>');
+    }
+  });
 }
 
 function renderResults(events){
@@ -42,7 +51,6 @@ function renderResults(events){
         buf += '<img src="img/map.png" alt="view on map" /></a></div>';
         buf += '</div>';
       });
-      // $('#out').append(buf);
     }
     buf += '</div><div class="cl"></div>';
     $('#out').append(buf);
@@ -50,10 +58,10 @@ function renderResults(events){
 }
 
 function getRecs() {
-  var apicallGET = BASE_URL + '/rec';
+  var apicall = BASE_URL + '/rec';
   $('#out').html('<img src="img/wait.gif" width="32px" alt="Getting recommendations, may take some 20sec ..." />');
-  $.get(apicallGET, function(d) {
-    console.debug("GET " + apicallGET);
+  $.get(apicall, function(d) {
+    console.debug("GET " + apicall);
     if (d) {
       renderResults(d);
      } else {
