@@ -6,7 +6,7 @@ MARVIN is a demonstrator for a nanoservices based application on DC/OS. He got h
 
 ## Concept & Architecture
 
-![MARVIN system architecture](img/sysarch.jpg)
+![MARVIN system architecture](img/sysarch.png)
 
 MARVIN comprises three nanoservices (nS):
 
