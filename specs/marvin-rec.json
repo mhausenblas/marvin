@@ -5,7 +5,7 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "mhausenblas/marvin-rec:0.3.0",
+      "image": "mhausenblas/marvin-rec:0.4.1",
       "forcePullImage": true,
       "network": "BRIDGE",
       "portMappings": [
