@@ -89,7 +89,7 @@ function getData(host, port, path, callback){
                 });
           }).on('error', function(err) {
               console.error('Error with request: ', err.message);
-              cb(err);
+              callback(err);
           });
 }
 
