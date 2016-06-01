@@ -55,7 +55,10 @@ function lookup(dpid, callback){
   console.log('Extracted DNS part ' + dnspart);
   getData('leader.mesos', 8123, '/v1/services/'+encodeURIComponent('_'+dnspart+'._tcp.marathon.mesos.'), function(err, resp){
     var address = 'http://';
-    if (err) res.status(404).end();
+    if (err) {
+      console.error('Service discovery failed due to ' + err);
+      res.status(404).end();
+    } 
     else {
       address += resp['ip'] + ':' + resp['port'];
       console.log('Resolved to address ' + address);
