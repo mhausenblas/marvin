@@ -57,7 +57,7 @@ function lookup(dpid, callback){
     var address = 'http://';
     if (err) res.status(404).end();
     else {
-      address += resp.ip + ':' + resp.port;
+      address += resp['ip'] + ':' + resp['port'];
       console.log('Resolved to address ' + address);
       callback(resp.ip, resp.port);
     }
