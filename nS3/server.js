@@ -99,7 +99,8 @@ function getEvents(res) {
   var out = [];
   console.info('Looking up events for today, that is: ' + lookupDate);
   lookup('/marvin/events', function(eIP, ePort){
-    getData(eIP, ePort, '/events?date='+lookupDate, function(err, events){
+    // getData(eIP, ePort, '/events?date='+lookupDate, function(err, events){
+    getData(eIP, 9999, '/events?date='+lookupDate, function(err, events){ // FIXME: shouldn't be a static port, need to figure why this doesn't work ATM
       if (err) res.status(404).end();
       else {
         async.each(events,
