@@ -35,6 +35,8 @@ app.get('/rec', function(req, res) {
 });
 
 // Service discovery using Mesos-DNS
+// Boils down to something like:
+// http://leader.mesos:8123/v1/services/_events-marvin._tcp.marathon.mesos.
 function lookup(dpid, callback){
   var dnspart = '';
   var tmp = ' ';
@@ -55,12 +57,14 @@ function lookup(dpid, callback){
   console.log('Extracted DNS part ' + dnspart);
   getData('leader.mesos', 8123, '/v1/services/'+encodeURIComponent('_'+dnspart+'._tcp.marathon.mesos.'), function(err, resp){
     var address = 'http://';
+    var rec;
     if (err) {
       console.error('Service discovery failed due to ' + err);
       res.status(404).end();
     } 
     else {
-      address += resp['ip'] + ':' + resp['port'];
+      rec = resp[0]; // lazy picking first entry, should be random really
+      address += rec['ip'] + ':' + rec['port'];
       console.log('Resolved to address ' + address);
       callback(resp.ip, resp.port);
     }
