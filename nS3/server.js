@@ -74,13 +74,13 @@ function lookup_mesosdns(dpid, callback){
 }
 
 // Service discovery using go2
-function lookup(dpid, callback){
+function lookup(res, dpid, callback){
   var dnspart = '';
   var tmp = ' ';
   var comp;
   
   console.log('go2: Looking up service with DPID ' + dpid);
-  getData(PUBLIC_AGENT, 6969, '/?dpid='+encodeURIComponent(dpid), function(err, address){
+  getPlain(PUBLIC_AGENT, 6969, '/?dpid='+encodeURIComponent(dpid), function(err, address){
     var ip, port;
     if (err) {
       console.error('go2: Service discovery failed due to ' + err);
@@ -124,12 +124,35 @@ function getData(host, port, path, callback){
           });
 }
 
+// plain HTTP data call
+function getPlain(host, port, path, callback){
+  return http.get({
+            host: host,
+            port: port,
+            path: path,
+            json: true
+          }, function(response) {
+                var body = '';
+                response.setEncoding('utf8');
+                response.on('data', function(d) {
+                  body += d;
+                });
+                response.on('end', function() {
+                  callback(null, body);
+                });
+          }).on('error', function(err) {
+              console.error('Error with request: ', err.message);
+              callback(err);
+          });
+}
+
+
 // Looks up events and PTFs
 function getEvents(res) {
   var lookupDate = new Date().toISOString().slice(0,10); // extract the YYYY-MM-DD part
   var out = [];
   console.info('Looking up events for today, that is: ' + lookupDate);
-  lookup('/marvin/events', function(eIP, ePort){
+  lookup(res, '/marvin/events', function(eIP, ePort){
     // getData(eIP, ePort, '/events?date='+lookupDate, function(err, events){
     getData(eIP, 9999, '/events?date='+lookupDate, function(err, events){ // FIXME: shouldn't be a static port, need to figure why this doesn't work ATM
       if (err) res.status(404).end();
@@ -140,7 +163,7 @@ function getEvents(res) {
             console.info('Looking at event ' + event["title"]);
             if (loc != ''){
               console.log('Looking up close-by public transport facilities for: ' + loc);
-              lookup('/marvin/osmlookup', function(oIP, oPort){
+              lookup(res, '/marvin/osmlookup', function(oIP, oPort){
                 getData(oIP, oPort, '/closeby/'+encodeURIComponent(loc.trim()), function(err, closeby){
                   if (err) res.status(404).end();
                   else {
