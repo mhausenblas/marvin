@@ -7,6 +7,8 @@ const async = require("async");
 
 const PORT = 8787;
 
+const PUBLIC_AGENT = process.env.PUBLIC_AGENT;
+
 const TEST_RESPONSE = [{
   'title': 'test',
   'start': '2016-06-02T15:00:00Z',
@@ -34,10 +36,10 @@ app.get('/rec', function(req, res) {
   getEvents(res);
 });
 
-// Service discovery using Mesos-DNS
+// Service discovery using Mesos-DNS directly
 // Boils down to something like:
 // http://leader.mesos:8123/v1/services/_events-marvin._tcp.marathon.mesos.
-function lookup(dpid, callback){
+function lookup_mesosdns(dpid, callback){
   var dnspart = '';
   var tmp = ' ';
   var comp;
@@ -67,6 +69,28 @@ function lookup(dpid, callback){
       address += rec.ip + ':' + rec.port;
       console.log('Resolved to address ' + address);
       callback(resp.ip, resp.port);
+    }
+  });
+}
+
+// Service discovery using go2
+function lookup(dpid, callback){
+  var dnspart = '';
+  var tmp = ' ';
+  var comp;
+  
+  console.log('go2: Looking up service with DPID ' + dpid);
+  getData(PUBLIC_AGENT, 6969, '/?dpid='+encodeURIComponent(dpid), function(err, address){
+    var ip, port;
+    if (err) {
+      console.error('go2: Service discovery failed due to ' + err);
+      res.status(404).end();
+    } 
+    else {
+      console.log('go2: Resolved to address ' + address);
+      ip = address.split('/')[2].split(':')[0]
+      port = address.split('/')[2].split(':')[1]
+      callback(ip, port);
     }
   });
 }
