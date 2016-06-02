@@ -64,7 +64,7 @@ function lookup(dpid, callback){
     } 
     else {
       rec = resp[0]; // lazy picking first entry, should be random really
-      address += rec['ip'] + ':' + rec['port'];
+      address += rec.ip + ':' + rec.port;
       console.log('Resolved to address ' + address);
       callback(resp.ip, resp.port);
     }
