@@ -18,5 +18,8 @@
   },
   "env": {
     "PUBLIC_AGENT": "52.38.192.109"
-  }
+  },
+  "acceptedResourceRoles": [
+    "slave_public"
+  ]
 }
