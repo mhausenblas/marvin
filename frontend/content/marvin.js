@@ -1,4 +1,4 @@
-var VERSION = '0.4.0';
+var VERSION = '0.5.0';
 var MARVIN_REC_DPID = '/marvin/rec';
 var MARVIN_REC_URL = '';
 var lookupDate = new Date().toISOString().slice(0, 10);
@@ -23,8 +23,8 @@ function serviceDiscovery() {
   $.get(apicall, function(d) {
     console.debug("GET " + apicall);
     if (d) {
-      MARVIN_REC_URL = d;
-      console.debug('Resolved MARVIN recommender service with DPID ' + MARVIN_REC_DPID + ' to ' + MARVIN_REC_URL);
+      console.debug('Resolved MARVIN recommender service with DPID ' + MARVIN_REC_DPID + ' to internal address ' + d);
+      MARVIN_REC_URL = 'http://' + window.location.hostname + ':' + d.split(':')[2]; // since SD gives us the internal IP, just using the port here 
      } else {
       $('#out').html('<div class="event">Can not find MARVIN recommender service :(</div>');
     }
