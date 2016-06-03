@@ -27,13 +27,20 @@ Data sources used in MARVIN:
 
 In order to use MARVIN you'll have to have a [DC/OS 1.7](https://dcos.io/releases/1.7.0/) cluster set up.
 
-Deploy manually: TBD
+Deploy manually:
+
+    $ cd specs/
+    $ dcos marathon app add go2.json
+    $ dcos marathon app add marvin-events.json
+    $ dcos marathon app add marvin-osmlookup.json
+    $ dcos marathon app add marvin-rec.json
+    $ dcos marathon app add marvin-frontend.json
 
 Deploy using [dploy](http://dploy.sh): TBD
 
 ## Usage
 
-Once MARVIN is deployed you can go to the front-end and view the recommendations for public transport facilities that are close-by your events:
+Once MARVIN is deployed you can go to the front-end and get recommendations for public transport facilities that are close-by your today's events:
 
 ![MARVIN system architecture](img/frontend.png)
 
