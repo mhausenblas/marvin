@@ -1,6 +1,6 @@
-# nS1: Calendar Proxy Nano Service
+# nS1: Calendar Proxy Nanoservice
 
-This nS is written in Go and takes a day as an input and emits events as timeframe/location key-value pairs:
+[This nS](../specs/marvin-events.json) is written in Go and takes a day as an input and emits events as timeframe/location key-value pairs:
 
     day --> (title, start, end, location)*
 

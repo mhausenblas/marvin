@@ -1,6 +1,6 @@
-# nS3: Close-by Public Transport Recommender Nano Service
+# nS3: Public Transport Facilities Recommender Nanoservice
 
-This nS is written in Node.js and produces a list of events with recommendations for close-by public transport facilities:
+[This nS](../specs/marvin-rec.json) is written in Node.js and produces a list of events with recommendations for close-by public transport facilities:
 
     --> (event, (close-by-ptf)*)
 

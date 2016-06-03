@@ -1,6 +1,6 @@
-# Frontend Web App
+# MARVIN Frontend Web App
 
-This is the MARVIN frontend, an NGINX-based Web app.
+This is the [MARVIN frontend](../specs/marvin-frontend.json), an NGINX-based, [containerized](Dockerfile) Web app.
 
 Start it like so:
 

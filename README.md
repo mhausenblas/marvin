@@ -12,9 +12,9 @@ spatio-temporal personal assistant.
 
 MARVIN comprises:
 
-1. a calendar proxy nanoservices [nS1](nS1/)
-1. an OpenStreetMap lookup nanoservices [nS2](nS2/)
-1. an public transport facilities (PTF) recommender nanoservices [nS3](nS3/)
+1. a calendar proxy nanoservice [nS1](nS1/)
+1. an OpenStreetMap lookup nanoservice [nS2](nS2/)
+1. an public transport facilities (PTF) recommender nanoservice [nS3](nS3/)
 1. a frontend, a NGINX-based Web app [frontend](frontend/)
 1. [go2](https://github.com/mhausenblas/go2) as a service discovery mechanism
 

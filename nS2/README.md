@@ -1,6 +1,6 @@
-# nS2: OpenStreetMap Lookup Nano Service
+# nS2: OpenStreetMap Lookup Nanoservice
 
-This nS is written in Python and maps a location and radius to close-by public transport facilities:
+[This nS](../specs/marvin-osmlookup.json) is written in Python and maps a location and radius to close-by public transport facilities:
 
     (location, radius) --> close-by-ptf*
 
