@@ -151,7 +151,7 @@ function getEvents(res) {
 function syncEvents(res, callback) {
   console.info('Trying to sync calendar ...');
   lookup(res, '/marvin/events', function(eIP, ePort){
-    getData(eIP, 9999, '/sync',
+    getPlain(eIP, 9999, '/sync',
       function(e, d){
         console.info('Syncing calendar was successful.');
         callback(res);

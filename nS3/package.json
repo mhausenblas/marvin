@@ -1,6 +1,6 @@
 {
   "name": "marvin_rec",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "MARVIN close-by public transport recommender nanoservice",
   "author": "Michael Hausenblas <michael@dcos.io>",
   "main": "server.js",
