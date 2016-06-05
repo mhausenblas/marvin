@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	VERSION         string = "0.3.0"
+	VERSION         string = "0.4.0"
 	DEFAULT_CAL_URL string = "https://calendar.google.com/calendar/ical/r5sj91351jcgb0gul5h0tvou7o%40group.calendar.google.com/public/basic.ics"
 	DAY_PARAM       string = "date"
 )
@@ -44,6 +44,7 @@ func main() {
 	parser := ics.New()
 
 	mux.HandleFunc("/sync", func(w http.ResponseWriter, r *http.Request) {
+		parser = ics.New()
 		inputChan := parser.GetInputChan()
 		inputChan <- DEFAULT_CAL_URL
 		parser.Wait()
