@@ -33,47 +33,10 @@ app.use(function(req, res, next) {
 });
 
 app.get('/rec', function(req, res) {
-  getEvents(res);
+  syncEvents(res, getEvents(res));
 });
 
-// Service discovery using Mesos-DNS directly
-// Boils down to something like:
-// http://leader.mesos:8123/v1/services/_events-marvin._tcp.marathon.mesos.
-function lookup_mesosdns(dpid, callback){
-  var dnspart = '';
-  var tmp = ' ';
-  var comp;
-  
-  console.log('Looking up service with DPID ' + dpid);
-  if(dpid.indexOf('/') >= 0){ // hierachical dpid like '/test/t0'
-    dnspart = dpid.substring(1);
-    comp = dnspart.split('/');
-    for (var i = comp.length-1; i >= 0; i--) {
-      tmp += comp[i] + "-";
-    }
-    dnspart = tmp.substring(0,tmp.length-1); // now it 't0-test'
-  }
-  else {
-    dnspart = dpid;
-  }
-  console.log('Extracted DNS part ' + dnspart);
-  getData('leader.mesos', 8123, '/v1/services/'+encodeURIComponent('_'+dnspart+'._tcp.marathon.mesos.'), function(err, resp){
-    var address = 'http://';
-    var rec;
-    if (err) {
-      console.error('Service discovery failed due to ' + err);
-      res.status(404).end();
-    } 
-    else {
-      rec = resp[0]; // lazy picking first entry, should be random really
-      address += rec.ip + ':' + rec.port;
-      console.log('Resolved to address ' + address);
-      callback(resp.ip, resp.port);
-    }
-  });
-}
-
-// Service discovery using go2
+// service discovery using go2
 function lookup(res, dpid, callback){
   var dnspart = '';
   var tmp = ' ';
@@ -95,7 +58,7 @@ function lookup(res, dpid, callback){
   });
 }
 
-// JSON HTTP data call
+// do JSON HTTP data call
 function getData(host, port, path, callback){
   return http.get({
             host: host,
@@ -124,7 +87,7 @@ function getData(host, port, path, callback){
           });
 }
 
-// plain HTTP data call
+// do plain HTTP data call
 function getPlain(host, port, path, callback){
   return http.get({
             host: host,
@@ -146,17 +109,14 @@ function getPlain(host, port, path, callback){
           });
 }
 
-
-// Looks up events and PTFs
+// looks up events and PTFs
 function getEvents(res) {
   var lookupDate = new Date().toISOString().slice(0,10); // extract the YYYY-MM-DD part
   var out = [];
   console.info('Looking up events for today, that is: ' + lookupDate);
   lookup(res, '/marvin/events', function(eIP, ePort){
-    // getData(eIP, ePort, '/events?date='+lookupDate, function(err, events){
-    getData(eIP, 9999, '/events?date='+lookupDate, function(err, events){ // FIXME: shouldn't be a static port, need to figure why this doesn't work ATM
-      if (err) res.status(404).end();
-      else {
+    getData(eIP, 9999, '/events?date='+lookupDate,
+      function(e, events){
         async.each(events,
           function(event, callback){
             var loc = event["loc"];
@@ -180,12 +140,29 @@ function getEvents(res) {
           function(err){
             res.json(out);
             res.end();
-          });
+          }
+        );
       }
-    });
+    );
   });
 }
 
+// syncs calendar proxy with calendar to make today's events available
+function syncEvents(res, callback) {
+  console.info('Trying to sync calendar ...');
+  lookup(res, '/marvin/events', function(eIP, ePort){
+    getData(eIP, 9999, '/sync',
+      function(e, d){
+        console.info('Syncing calendar was successful.');
+        callback();
+      },
+      function(err){
+        console.info('Syncing calendar was NOT successful!');
+        res.status(404).end();
+      }
+    );
+  });
+}
 
 app.listen(PORT);
 console.info('This is MARVIN nanoservice [Close-by Public Transport Recommender] listening on port ' + PORT);
