@@ -33,7 +33,7 @@ app.use(function(req, res, next) {
 });
 
 app.get('/rec', function(req, res) {
-  syncEvents(res, getEvents(res));
+  syncEvents(res, getEvents);
 });
 
 // service discovery using go2
@@ -154,7 +154,7 @@ function syncEvents(res, callback) {
     getData(eIP, 9999, '/sync',
       function(e, d){
         console.info('Syncing calendar was successful.');
-        callback();
+        callback(res);
       },
       function(err){
         console.info('Syncing calendar was NOT successful!');
